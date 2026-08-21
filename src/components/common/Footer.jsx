@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSite } from '../../context/SiteContext';
-import { MapPin, Phone, MessageSquare, Mail, ExternalLink, ShieldCheck, Heart } from 'lucide-react';
+import { MapPin, Phone, MessageSquare, Mail, ExternalLink, ShieldCheck, Heart, GraduationCap } from 'lucide-react';
 
 export const Footer = () => {
-  const { config, navigateTo, openEnquiry, setIsConfigDrawerOpen } = useSite();
+  const { config, navigateTo, openEnquiry } = useSite();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -14,23 +14,23 @@ export const Footer = () => {
           {/* Col 1: Institute Brand & Positioning */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-white/10 border border-brand-amber/40 flex items-center justify-center font-heading font-extrabold text-xl text-white">
+              <div className="w-10 h-10 rounded-xl bg-white/10 border border-brand-amber/40 flex items-center justify-center font-heading font-extrabold text-xl text-white shadow-sm">
                 <span>S</span>
                 <span className="text-brand-amber">P</span>
               </div>
               <div>
-                <div className="font-heading font-bold text-xl text-white tracking-tight">S.P. CLASSES</div>
-                <div className="text-[10px] uppercase font-semibold text-brand-amber tracking-wider">Etawah, Uttar Pradesh</div>
+                <div className="font-heading font-extrabold text-xl text-white tracking-tight">S.P. CLASSES</div>
+                <div className="text-[10px] uppercase font-bold text-brand-amber tracking-wider">Etawah, Uttar Pradesh</div>
               </div>
             </div>
             
             <p className="text-sm text-slate-300 leading-relaxed">
-              Focused academic learning, concept clarity, and approachable guidance for local students in Shivpuri, Pachaoli.
+              Focused academic learning, concept clarity, and personalized guidance for students in Shivpuri, Pachaoli, and Etawah.
             </p>
 
             <div className="pt-2">
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-brand-amber/15 text-amber-300 text-xs border border-amber-500/30">
-                <ShieldCheck className="w-3.5 h-3.5 text-brand-amber" />
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-amber/15 text-amber-300 text-xs font-semibold border border-amber-500/30">
+                <ShieldCheck className="w-4 h-4 text-brand-amber" />
                 <span>Verified Google Maps Location</span>
               </span>
             </div>
@@ -38,7 +38,7 @@ export const Footer = () => {
 
           {/* Col 2: Navigation Links */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
               Explore Website
             </h3>
             <ul className="space-y-2.5 text-sm">
@@ -101,10 +101,10 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Col 3: Verified Location Details (Rule 23 & 29) */}
+          {/* Col 3: Verified Location Details */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
-              Verified Address
+            <h3 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
+              Centre Location
             </h3>
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-2.5">
@@ -119,67 +119,68 @@ export const Footer = () => {
                   href={config.googleBusinessProfileUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs text-brand-amber hover:underline font-medium"
+                  className="inline-flex items-center gap-1.5 text-xs text-brand-amber hover:underline font-bold"
                 >
                   <span>Open in Google Maps</span>
-                  <ExternalLink className="w-3 h-3" />
+                  <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </div>
 
               <div className="pt-2 text-xs text-slate-400">
-                <span className="text-slate-300 font-medium">Opening Hours:</span> {config.openingHours}
+                <span className="text-white font-medium">Timings:</span> {config.openingHours}
               </div>
             </div>
           </div>
 
           {/* Col 4: Enquiries & Action */}
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
-              Student Enquiries
+            <h3 className="text-xs font-bold uppercase tracking-wider text-white">
+              Student Admissions
             </h3>
-            <p className="text-xs text-slate-300">
-              Have questions about available batches, subjects, or upcoming admissions?
+            <p className="text-xs text-slate-300 leading-relaxed">
+              Have questions about batch availability, fees, or upcoming admissions? Connect with our team.
             </p>
 
             <button
               onClick={() => openEnquiry()}
-              className="w-full py-2.5 px-4 bg-brand-amber hover:bg-brand-amber-hover text-brand-navy font-bold text-sm rounded-lg shadow transition-all duration-150 text-center"
+              className="w-full py-3 px-4 bg-brand-amber hover:bg-brand-amber-hover text-brand-navy font-bold text-sm rounded-xl shadow transition-all duration-150 text-center"
             >
               Enquire About Classes
             </button>
 
             <div className="space-y-2 pt-1 text-xs">
-              <div className="flex items-center gap-2 text-slate-300">
+              <a 
+                href={`tel:${config.phoneRaw}`}
+                className="flex items-center gap-2 text-slate-300 hover:text-white transition"
+              >
                 <Phone className="w-3.5 h-3.5 text-brand-amber" />
-                <span className="truncate">Phone: {config.phone}</span>
-              </div>
-              <div className="flex items-center gap-2 text-slate-300">
-                <MessageSquare className="w-3.5 h-3.5 text-brand-amber" />
+                <span className="truncate">Call: {config.phone}</span>
+              </a>
+              <a 
+                href={`https://wa.me/${config.whatsappRaw}?text=${encodeURIComponent('Hello S.P. Classes, I would like to enquire about classes.')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-slate-300 hover:text-white transition"
+              >
+                <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
                 <span className="truncate">WhatsApp: {config.whatsapp}</span>
-              </div>
+              </a>
             </div>
           </div>
         </div>
 
-        {/* Bottom Disclaimer & Copyright */}
+        {/* Bottom Copyright */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div>
             © {currentYear} S.P. Classes. All rights reserved. (Pachaoli, Etawah 206002).
           </div>
           
           <div className="flex items-center gap-4 text-slate-400">
-            <button
-              onClick={() => setIsConfigDrawerOpen(true)}
-              className="hover:text-brand-amber underline transition"
-            >
-              Owner Configuration Demo
-            </button>
-            <span>•</span>
             <button 
               onClick={() => navigateTo('faq')}
               className="hover:text-slate-200 transition"
             >
-              FAQ
+              Admissions FAQ
             </button>
             <span>•</span>
             <button 
@@ -188,6 +189,15 @@ export const Footer = () => {
             >
               Location Map
             </button>
+            <span>•</span>
+            <a 
+              href={config.googleBusinessProfileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-brand-amber transition"
+            >
+              Google Maps Listing
+            </a>
           </div>
         </div>
       </div>

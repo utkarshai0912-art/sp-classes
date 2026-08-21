@@ -5,7 +5,6 @@ import { Footer } from './components/common/Footer';
 import { MobileStickyBar } from './components/common/MobileStickyBar';
 import { EnquiryModal } from './components/common/EnquiryModal';
 import { LightboxModal } from './components/common/LightboxModal';
-import { ConfigEditorDrawer } from './components/common/ConfigEditorDrawer';
 
 import { HomePage } from './pages/HomePage';
 import { CoursesPage } from './pages/CoursesPage';
@@ -16,7 +15,7 @@ import { FAQPage } from './pages/FAQPage';
 import { ContactPage } from './pages/ContactPage';
 import { AdmissionsPage } from './pages/AdmissionsPage';
 
-import { CheckCircle2, AlertCircle, Info, Sparkles } from 'lucide-react';
+import { CheckCircle2, AlertCircle, Info } from 'lucide-react';
 
 const MainContent = () => {
   const { activePage, toastMessage } = useSite();
@@ -81,7 +80,6 @@ const MainContent = () => {
       {/* Universal Interactive Modals */}
       <EnquiryModal />
       <LightboxModal />
-      <ConfigEditorDrawer />
     </div>
   );
 };

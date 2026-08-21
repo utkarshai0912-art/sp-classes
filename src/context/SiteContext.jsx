@@ -4,31 +4,18 @@ import { initialSiteConfig } from '../data/siteConfig';
 const SiteContext = createContext();
 
 export const SiteProvider = ({ children }) => {
-  const [config, setConfig] = useState(() => {
-    const saved = localStorage.getItem('sp_classes_config');
-    if (saved) {
-      try {
-        return JSON.parse(saved);
-      } catch (e) {
-        return initialSiteConfig;
-      }
-    }
-    return initialSiteConfig;
-  });
-
+  const [config, setConfig] = useState(initialSiteConfig);
   const [activePage, setActivePage] = useState('home');
   const [enquiryModalOpen, setEnquiryModalOpen] = useState(false);
   const [enquiryPreselectedCourse, setEnquiryPreselectedCourse] = useState('');
   const [lightboxData, setLightboxData] = useState({ isOpen: false, index: 0, items: [] });
-  const [isConfigDrawerOpen, setIsConfigDrawerOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState(null);
 
-  // Sync to localStorage
+  // Clear any old placeholder cache in user's localStorage
   useEffect(() => {
-    localStorage.setItem('sp_classes_config', JSON.stringify(config));
-  }, [config]);
+    localStorage.removeItem('sp_classes_config');
+  }, []);
 
-  // Scroll to top on page change
   const navigateTo = (pageId, hashTarget = null) => {
     setActivePage(pageId);
     if (hashTarget) {
@@ -68,23 +55,10 @@ export const SiteProvider = ({ children }) => {
     }, 4000);
   };
 
-  const updateConfig = (newConfig) => {
-    setConfig(newConfig);
-    showToast('Configuration updated live!');
-  };
-
-  const resetConfig = () => {
-    setConfig(initialSiteConfig);
-    localStorage.removeItem('sp_classes_config');
-    showToast('Reset to default placeholder settings.');
-  };
-
   return (
     <SiteContext.Provider
       value={{
         config,
-        updateConfig,
-        resetConfig,
         activePage,
         navigateTo,
         enquiryModalOpen,
@@ -95,8 +69,6 @@ export const SiteProvider = ({ children }) => {
         setLightboxData,
         openLightbox,
         closeLightbox,
-        isConfigDrawerOpen,
-        setIsConfigDrawerOpen,
         toastMessage,
         showToast,
       }}
