@@ -3,6 +3,7 @@ import { SiteProvider, useSite } from './context/SiteContext';
 import { Navbar } from './components/common/Navbar';
 import { Footer } from './components/common/Footer';
 import { MobileStickyBar } from './components/common/MobileStickyBar';
+import { FloatingWhatsApp } from './components/home/FloatingWhatsApp';
 import { EnquiryModal } from './components/common/EnquiryModal';
 import { LightboxModal } from './components/common/LightboxModal';
 
@@ -76,6 +77,9 @@ const MainContent = () => {
 
       {/* Mobile Sticky Quick Action Bar */}
       <MobileStickyBar />
+
+      {/* Desktop Floating WhatsApp Button */}
+      <FloatingWhatsApp />
 
       {/* Universal Interactive Modals */}
       <EnquiryModal />

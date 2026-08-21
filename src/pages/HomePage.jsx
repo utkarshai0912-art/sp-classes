@@ -1,7 +1,9 @@
 import React from 'react';
 import { Hero } from '../components/home/Hero';
 import { TrustHighlights } from '../components/home/TrustHighlights';
+import { BatchFinder } from '../components/home/BatchFinder';
 import { CoursesPreview } from '../components/home/CoursesPreview';
+import { ComparisonSection } from '../components/home/ComparisonSection';
 import { WhyChooseUs } from '../components/home/WhyChooseUs';
 import { AboutPreview } from '../components/home/AboutPreview';
 import { LearningProcess } from '../components/home/LearningProcess';
@@ -16,7 +18,9 @@ export const HomePage = () => {
     <main>
       <Hero />
       <TrustHighlights />
+      <BatchFinder />
       <CoursesPreview />
+      <ComparisonSection />
       <WhyChooseUs />
       <AboutPreview />
       <LearningProcess />

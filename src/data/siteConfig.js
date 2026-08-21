@@ -1,14 +1,14 @@
 /**
  * S.P. CLASSES — OFFICIAL WEBSITE DATA
  * Location: Pachawali Rd, Shivpuri, Pachaoli, Uttar Pradesh 206002, India
- * Google Business Profile: https://maps.app.goo.gl/htEY42nNfBeE9VG89
+ * Google Maps: https://maps.app.goo.gl/htEY42nNfBeE9VG89
  */
 
 export const initialSiteConfig = {
   businessName: "S.P. Classes",
   brandMonogram: "SP",
   tagline: "Learn With Clarity. Prepare With Confidence.",
-  subTagline: "S.P. Classes provides a disciplined, concept-driven learning environment where students master core fundamentals, resolve doubts without hesitation, and excel in their academic journey.",
+  subTagline: "S.P. Classes is Shivpuri's premier offline coaching centre offering focused, small-batch mentoring for Class 8th to 12th students. We replace cramming with true understanding and board exam excellence.",
   
   // Location & Contact Details
   address: "Pachawali Rd, Shivpuri, Pachaoli, Uttar Pradesh 206002, India",
@@ -20,7 +20,7 @@ export const initialSiteConfig = {
   whatsapp: "+91 94120 78450",
   whatsappRaw: "919412078450",
   email: "admissions@spclasses.in",
-  openingHours: "Mon – Sat: 7:00 AM – 7:30 PM | Sun: Special Doubt Batches",
+  openingHours: "Mon – Sat: 7:00 AM – 7:30 PM | Sun: Special Doubt & Test Sessions",
   
   // Verified Google Maps & Profile Links
   googleBusinessProfileUrl: "https://maps.app.goo.gl/htEY42nNfBeE9VG89",
@@ -32,26 +32,55 @@ export const initialSiteConfig = {
     {
       id: "trust-1",
       title: "Local Learning Centre",
-      description: "Conveniently located on Pachawali Road for students across Shivpuri, Pachaoli & Etawah.",
+      description: "Conveniently situated on Pachawali Road for students across Shivpuri, Pachaoli & Etawah.",
       icon: "MapPin"
     },
     {
       id: "trust-2",
-      title: "Concept-First Teaching",
-      description: "Zero rote memorization. We focus on building rock-solid conceptual clarity from day one.",
-      icon: "Lightbulb"
+      title: "Max 25 Students per Batch",
+      description: "Small, disciplined batches to ensure individual attention and zero classroom overcrowding.",
+      icon: "Users"
     },
     {
       id: "trust-3",
-      title: "Dedicated Doubt Sessions",
-      description: "Approachable classroom atmosphere where every student's queries are resolved individually.",
+      title: "Daily 1-on-1 Doubt Clearing",
+      description: "Dedicated 30-minute post-lecture doubt sessions so no student leaves with unresolved questions.",
       icon: "HelpCircle"
     },
     {
       id: "trust-4",
-      title: "Regular Practice & Tests",
-      description: "Weekly chapter evaluations, structured assignments, and consistent performance tracking.",
+      title: "Weekly Board-Pattern Tests",
+      description: "Evaluated answer sheets with step-marking feedback and monthly progress reports for parents.",
       icon: "FileCheck"
+    }
+  ],
+
+  // Comparison Matrix: S.P. Classes vs Traditional Unstructured Tuitions
+  comparison: [
+    {
+      feature: "Batch Size & Discipline",
+      spClasses: "Strictly limited to 20–25 students with quiet, distraction-free seating.",
+      traditional: "Often overcrowded with 50+ students or informal home study without discipline."
+    },
+    {
+      feature: "Teaching Methodology",
+      spClasses: "Concept-first approach explaining the 'why' & 'how' before solving questions.",
+      traditional: "Heavy emphasis on rote formula memorization and copy-pasting textbook notes."
+    },
+    {
+      feature: "Doubt Support",
+      spClasses: "Dedicated daily 1-on-1 doubt clearing after every lecture with mentor.",
+      traditional: "Limited or rushed time for doubts; shy students often get left behind."
+    },
+    {
+      feature: "Testing & Parent Feedback",
+      spClasses: "Weekly chapter-wise tests, simulated board mock exams, and transparent report cards.",
+      traditional: "Infrequent or unstandardized tests with minimal communication to parents."
+    },
+    {
+      feature: "Study Material & Resources",
+      spClasses: "Curated Daily Practice Problems (DPP), formula sheets & 10-year board paper solutions.",
+      traditional: "Only standard textbook questions without supplementary practice drills."
     }
   ],
 
@@ -59,75 +88,119 @@ export const initialSiteConfig = {
   courses: [
     {
       id: "course-1",
-      name: "Class 9 & 10 Secondary Foundation",
-      classLevel: "Class 9th & 10th (CBSE / State Board)",
+      name: "Class 9 & 10 Secondary Foundation Track",
+      classLevel: "Class 9th & 10th (CBSE / UP State Board)",
       subjects: ["Mathematics", "Science (Physics, Chem, Bio)", "English Grammar"],
-      description: "Comprehensive foundation coaching focused on building strong problem-solving skills, mastering NCERT syllabus, and preparing thoroughly for 10th Board examinations.",
-      duration: "Full Academic Year",
+      description: "Comprehensive foundation coaching focused on building strong analytical problem-solving skills, mastering NCERT textbooks, and preparing thoroughly for 10th Board examinations.",
+      duration: "Full Academic Session (Apr – Feb)",
       timing: "Morning: 7:00 AM – 9:00 AM | Evening: 4:00 PM – 6:30 PM",
-      fee: "Affordable Monthly / Term Options",
+      fee: "Affordable Monthly / Quarterly Plans",
       category: "Secondary",
-      badge: "Board Prep Leader",
+      badge: "Class 9 & 10 Board Focus",
       features: [
-        "Complete NCERT & Reference Book Coverage",
+        "100% NCERT & Exemplar Line-by-Line Mastery",
         "Weekly Objective & Subjective Chapter Tests",
         "Personal Doubt Support After Every Lecture",
-        "Board Answer Writing Technique Guidance"
+        "Step-wise Board Answer Writing & Presentation Drills"
       ]
     },
     {
       id: "course-2",
-      name: "Class 11 & 12 Senior Secondary Academic Track",
+      name: "Class 11 & 12 Senior Secondary Science Track",
       classLevel: "Class 11th & 12th (Science Stream)",
       subjects: ["Physics", "Chemistry", "Mathematics", "Biology"],
-      description: "In-depth conceptual lectures designed to help students master complex derivations, numericals, and theory for Senior Secondary Boards and competitive entrance foundations.",
-      duration: "1 Year / 2 Year Integrated",
+      description: "In-depth conceptual lectures designed to help students master complex derivations, numericals, and organic chemistry mechanisms for 12th Boards and entrance fundamentals.",
+      duration: "1 Year / 2 Year Comprehensive",
       timing: "Morning: 6:30 AM – 9:00 AM | Evening: 4:30 PM – 7:30 PM",
       fee: "Flexible Installments Available",
       category: "Senior Secondary",
-      badge: "Target 90%+",
+      badge: "Target 90%+ in Boards",
       features: [
-        "Rigorous Numerical & Theory Sessions",
-        "Previous 10 Years' Board Paper Solutions",
-        "Formula & Derivation Master Handouts",
-        "Simulated Board Mock Exam Series"
+        "Rigorous Numerical Drills & Derivation Worksheets",
+        "Previous 10 Years' Board Question Bank Solutions",
+        "Formula & Reaction Mechanism Master Handouts",
+        "5 Full-Length Simulated Board Pre-Board Mock Exams"
       ]
     },
     {
       id: "course-3",
-      name: "Target Mathematics & Science Focus",
+      name: "Target Mathematics & Science Concept Booster",
       classLevel: "Class 8th to 12th",
-      subjects: ["Advanced Mathematics", "Core Science"],
-      description: "Specialized modular batches for students who want to eliminate fear in Maths and Science, improve analytical speed, and master high-difficulty problem types.",
-      duration: "Module-Based / Ongoing",
+      subjects: ["Core Mathematics", "Physics & Chemistry"],
+      description: "Specialized modular batches for students who struggle with numericals, algebraic equations, or chemical balancing, designed to turn weak subjects into high-scoring strengths.",
+      duration: "Module-Based / Ongoing Support",
       timing: "Flexible Evening Batches",
       fee: "Subject-Wise Structure",
       category: "Specialized",
-      badge: "Concept Booster",
+      badge: "Subject Specialist",
       features: [
         "Step-by-Step Problem Solving Methodology",
-        "Individual Attention for Struggling Students",
+        "Slow-Paced Concept Rebuilding for Challenged Students",
         "Daily Practice Problems (DPP) Handouts",
-        "Mental Math & Calculation Shortcuts"
+        "Mental Calculation & Speed Math Shortcuts"
       ]
     },
     {
       id: "course-4",
-      name: "Board Exam Revision & Test Series",
+      name: "Board Exam Revision & Fast-Track Test Series",
       classLevel: "Class 10th & 12th Board Candidates",
-      subjects: ["All Core Board Subjects"],
-      description: "Intensive 3-month fast-track revision batch featuring comprehensive syllabus review, chapter-wise test series, time management drills, and scoring strategies.",
-      duration: "3 to 4 Months (Crash Course)",
+      subjects: ["All Core Board Examination Subjects"],
+      description: "Intensive 3-month revision sprint featuring rapid high-weightage chapter review, chapter-wise test series, time management drills, and scoring strategies.",
+      duration: "3 to 4 Months (Oct – Jan)",
       timing: "Special Revision Timetable",
       fee: "One-time Comprehensive Fee",
       category: "Revision",
-      badge: "Exam Sprint",
+      badge: "Exam Sprint Batch",
       features: [
-        "Fast-Track High-Weightage Topic Revision",
-        "5 Full-Length Board Pattern Mock Tests",
-        "Detailed Answer Sheet Evaluation & Feedback",
-        "Exam Stress Management & Tips"
+        "Fast-Track High-Yield Topic Revision",
+        "10 Full-Length Board Pattern Mock Tests",
+        "Detailed Answer Sheet Correction & Feedback",
+        "Exam Stress Management & Time Allocation Tips"
       ]
+    }
+  ],
+
+  // Batch Finder Matrix (Interactive Tool)
+  batchFinder: [
+    {
+      grade: "Class 10",
+      board: "CBSE Board",
+      recommendedTrack: "Class 9 & 10 Secondary Foundation Track",
+      subjects: "Mathematics, Science, English",
+      timing: "Evening Batch (4:00 PM – 6:30 PM)",
+      focus: "Board Exam 95%+ Target, NCERT Line-by-Line, Step Marking Drills"
+    },
+    {
+      grade: "Class 10",
+      board: "UP State Board",
+      recommendedTrack: "Class 9 & 10 Secondary Foundation Track (Hindi/English Medium)",
+      subjects: "Mathematics, Science, English",
+      timing: "Morning Batch (7:00 AM – 9:00 AM)",
+      focus: "UP Board Syllabus, NCERT Based, Model Paper Solving"
+    },
+    {
+      grade: "Class 12",
+      board: "CBSE / State Board",
+      recommendedTrack: "Class 11 & 12 Senior Secondary Science Track",
+      subjects: "Physics, Chemistry, Mathematics / Biology",
+      timing: "Evening Batch (4:30 PM – 7:30 PM)",
+      focus: "Derivations, Complex Numericals, Previous 10 Years' Papers"
+    },
+    {
+      grade: "Class 9",
+      board: "CBSE / State Board",
+      recommendedTrack: "Class 9 Foundation & NTSE Base Track",
+      subjects: "Mathematics & Science",
+      timing: "Evening Batch (4:00 PM – 6:00 PM)",
+      focus: "Fundamental Building, Conceptual Problem Sets, Weekly Quizzes"
+    },
+    {
+      grade: "Class 11",
+      board: "CBSE / State Board",
+      recommendedTrack: "Class 11 Science Concept Mastery",
+      subjects: "Physics, Chemistry, Maths / Bio",
+      timing: "Morning Batch (6:30 AM – 9:00 AM)",
+      focus: "Smooth Transition from Class 10 to 11, Calculus & Vectors Base"
     }
   ],
 
@@ -206,7 +279,7 @@ export const initialSiteConfig = {
       name: "Mathematics Mentorship Team",
       role: "Class 9th – 12th Mathematics Specialist",
       experience: "Senior Faculty",
-      focus: "Algebra, Calculus, Geometry & Board Answer Writing"
+      focus: "Algebra, Calculus, Geometry & Board Answer Writing Techniques"
     },
     {
       id: "fac-2",
