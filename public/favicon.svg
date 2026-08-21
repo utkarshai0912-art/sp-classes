@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="navGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1F3A"/>
+      <stop offset="100%" stop-color="#133059"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Shield/Rounded Box -->
+  <rect width="64" height="64" rx="14" fill="url(#navGrad)"/>
+  
+  <!-- Subtle Open Book Base -->
+  <path d="M12 45 C20 40 28 42 32 46 C36 42 44 40 52 45 L52 47 C44 42 36 44 32 48 C28 44 20 42 12 47 Z" fill="#F59E0B" opacity="0.9"/>
+  
+  <!-- Monogram S -->
+  <path d="M22 21 C22 17 26 15 30 15 C33 15 35 16.5 35 19 C35 24 22 23.5 22 30 C22 35 26 36 30 36 C34 36 36 34.5 36 32" 
+        fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        
+  <!-- Monogram P Pillar & Loop with Amber Accent -->
+  <path d="M40 16 L40 36 M40 16 C46 16 48 18 48 22 C48 26 46 28 40 28" 
+        fill="none" stroke="url(#amberGrad)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        
+  <!-- Center Star/Progress Beacon -->
+  <circle cx="32" cy="11" r="2.5" fill="#F59E0B"/>
+</svg>
